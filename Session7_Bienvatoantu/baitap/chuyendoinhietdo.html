@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+    <body>
+        <h1>Chuyển đổi nhiệt độ:</h1>
+        Nhập C:<input type="text" name="Celsius" id="C" size="10">
+        <p><button onclick="TinhF()">Tính F</button></p>
+        <label>Tính Fahrenheit:</label>
+        <span id="F"></span>
+        <script>
+            function TinhF(){
+                let C=parseFloat(document.getElementById("C").value);
+                let F=[(C/5)*9+32];
+                document.getElementById("F").innerHTML=F;
+            }
+        </script>
+
+    </body>
+    </html>
