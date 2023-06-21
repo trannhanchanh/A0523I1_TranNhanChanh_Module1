@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+    <br>
+        <h1>Nhập điểm trung bình:</h1>
+       
+            Nhập điểm lý:<input type="number" name="Điểm lý" id="ly" size="10">
+            <br>Nhập điểm hóa:<input type="number" name="Điểm hóa" id="hoa" size="10"></br>
+            Nhập điểm sinh:<input type="number" name="Điểm sinh" id="sinh" size="10">
+            <p>
+                <button onclick="Tinhdiem()">Tính điểm trung bình</button>
+            </p>
+            <label>Điểm trung bình:</label>
+            <span id="dtb"></span>
+            <br><label>Tổng điểm:</label>
+            <span id="td"></span></br>
+            <script>
+                function Tinhdiem() {
+                    let ly=parseFloat(document.getElementById("ly").value);
+                    let hoa=parseFloat(document.getElementById("hoa").value);
+                    let sinh=parseFloat(document.getElementById("sinh").value);
+                    let dtb=(ly+hoa+sinh)/3;
+                    let td=(ly+hoa+sinh);
+                    document.getElementById("dtb").innerHTML=dtb;
+                    document.getElementById("td").innerHTML=td;
+
+                }
+            </script>
+
+
+        
+
+       
+
+
+    </body>
+
+    </html>
