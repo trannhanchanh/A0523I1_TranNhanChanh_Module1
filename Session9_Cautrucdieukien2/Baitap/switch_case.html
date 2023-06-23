@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <input type="text" name="Thang" size="10" id="thang">
+        <input type="button" onclick="ngay()" value="Tính số ngày" id="ngay">
+        <label id="Ngaytrongthang"></label>
+       
+    <script>
+        function ngay(){
+             let month=document.getElementById("thang").value;
+            switch(month){
+                case"1":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 1 có 31 ngày";
+                }
+                break;
+                case"2":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 2 có 28 hoặc 29 ngày";
+                }
+                break;
+                case"3":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 3 có 31 ngày";
+                }
+                break;
+                case"4":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 4 có 30 ngày";
+                }
+                break;
+                case"5":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 5 có 31 ngày";
+                }
+                break;
+                case"6":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 6 có 30 ngày";
+                }
+                break;
+                case"7":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 7 có 31 ngày";
+                }
+                break;
+                case"8":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 8 có 31 ngày";
+                }
+                break;
+                case"9":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 9 có 30 ngày";
+                }
+                break;
+                case"10":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 10 có 31 ngày";
+                }
+                break;
+                case"11":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 11 có 30 ngày";
+                }
+                break;
+                case"12":{
+                    document.getElementById("Ngaytrongthang").innerHTML="Tháng 12 có 31 ngày";
+                }
+                break;
+                default:{
+                    document.getElementById("Ngaytrongthang").innerHTML="Infinity";
+                }
+
+            }
+
+
+        }
+    </script>
+    </body>
+    </html>
