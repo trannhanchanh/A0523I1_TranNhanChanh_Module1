@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+    <body>
+        <h1>Tính diện tích hình tròn:</h1>
+        Bán kính:<input type="text" name="r" id="r" size="10">
+        <button onclick="Dientich()">Diện tích hình tròn</button>
+        <label>Diện tích:</label>
+        <span id="Dientich"></span>
+        <script>
+            function Dientich() {
+                let r=parseFloat(document.getElementById("r").value);
+                let Dientich= Math.PI *r*r;
+                document.getElementById("Dientich").innerHTML=Dientich;
+            }
+        </script>
+
+    </body>
+    </html>
