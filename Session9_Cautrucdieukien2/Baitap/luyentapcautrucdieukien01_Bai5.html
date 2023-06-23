@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <script>
+            let diemthigiuaki= parseFloat(prompt("Nhập điểm thi giữa kì:"));
+            let diemthicuoiki= parseFloat(prompt("Nhập điểm thi cuối kì:"));
+            let diemkiemtra=(diemthigiuaki+diemthicuoiki*3)/4;
+
+            if(diemkiemtra>=8 && diemkiemtra<=10){
+                alert("Học sinh giỏi");
+            } else if(diemkiemtra<8 && diemkiemtra>=6.5){
+                alert("học sinh khá");
+            } else if(diemkiemtra<6.5 && diemkiemtra>=5){
+                alert("học sinh trung bình");
+            } else {
+                alert("học sinh yếu");
+            }
+
+            
+
+        </script>
+
+    </body>
+    </html>
