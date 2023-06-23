@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+         <script>
+            let sophut=parseFloat(prompt("Nhập số phút:"));
+            if(sophut <50) {
+                alert("Số tiền:"+(25000+sophut*600));
+            } else if(sophut<150){
+                alert("Số tiền:"+(25000+600*50+(sophut-50)*400));
+            } else{
+                alert("Số tiền:"+(25000+600*50+400*100+(sophut-150)*200));
+            }
+         </script>
+    </body>
+    </html>
