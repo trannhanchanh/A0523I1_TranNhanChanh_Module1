@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        <style>
+           table{
+            border-collapse: collapse;
+            text-align: center;
+           }
+        </style>
+    </head>
+    <body>
+        <table border="1" width="200px" height="200px">
+            <tr>
+                <td colspan="4" width="200px" height="50px"><input type="text" onclick="set()" id="ketqua"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="set('1')" value="1"></td>
+                <td><input type="button" onclick="set('2')" value="2"></td>
+                <td><input type="button" onclick="set('3')" value="3"></td>
+                <td><input type="button" onclick="set('+')" value="+"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="set('4')" value="4"></td>
+                <td><input type="button" onclick="set('5')" value="5"></td>
+                <td><input type="button" onclick="set('6')" value="6"></td>
+                <td><input type="button" onclick="set('-')" value="-"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="set('7')" value="7"></td>
+                <td><input type="button" onclick="set('8')" value="8"></td>
+                <td><input type="button" onclick="set('9')" value="9"></td>
+                <td><input type="button" onclick="set('*')" value="x"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="del('c')" value="C"></td>
+                <td><input type="button" onclick="set('0')" value="0"></td>
+                <td><input type="button" onclick="result('=')" value="="></td>
+                <td><input type="button" onclick="set('/')" value="/"></td>
+            </tr>
+        </table>
+        <script>
+            function set(op) {
+                document.getElementById("ketqua").value += op;
+
+            }
+            function result() {
+            var Exp = document.getElementById("ketqua");
+            var Exp1 = Exp.value;
+            var result = eval(Exp1);
+            //alert(result);
+           Exp.value = result;
+    }
+           function del() {
+           var elem = document.getElementById("ketqua").value;
+           var length = elem.length;
+           length--;
+           var a = elem.substr(0, length);
+           document.getElementById("ketqua").value = a;
+    }
+        </script>
+
+    </body>
+    </html>
