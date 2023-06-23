@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<br lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <input type="text" name="Nhapso" size="10" id="Sothunhat">
+        <input type="text" name="Nhapso" size="10" id="Sothuhai">
+        <br>
+        <input type="button" onclick="add()" value="Addition(+)" id="Cong2so">
+        <input type="button" onclick="sub()" value="Subtraction(-)" id="Tru2so">
+        <input type="button" onclick="mul()" value="Multiplication(X)" id="Nhan2so">
+        <input type="button" onclick="div()" value="Division(/)" id="Chia2so">
+       <p>
+        <label>Result division:</label>
+        <span id="result"></span>
+       </p>
+
+    <script>
+        function add() {
+            let a=  document.getElementById("Sothunhat").value;
+            let b=  document.getElementById("Sothuhai").value;
+            add =parseFloat (a) + parseFloat(b);
+            document.getElementById("result").innerHTML=add;
+
+        }
+        function sub() {
+            let a=  document.getElementById("Sothunhat").value;
+            let b=  document.getElementById("Sothuhai").value;
+            sub =parseFloat (a) - parseFloat(b);
+            document.getElementById("result").innerHTML=sub;
+
+        }
+        function mul() {
+            let a=  document.getElementById("Sothunhat").value;
+            let b=  document.getElementById("Sothuhai").value;
+            mul =parseFloat (a) * parseFloat(b);
+            document.getElementById("result").innerHTML=mul;
+
+        }
+        function div() {
+            let a=  document.getElementById("Sothunhat").value;
+            let b=  document.getElementById("Sothuhai").value;
+            div =parseFloat (a) / parseFloat(b);
+            document.getElementById("result").innerHTML=div;
+
+        }
+    </script>
+
+    
+
+    </body>
+    </html>
