@@ -10,7 +10,11 @@
         <script>
             let m=prompt("Nhập độ dài mét:")
             let ft= m*3.2808;
-            alert("Độ dài feet là:"+ft);
+            if(m>0){
+                alert("Độ dài feet là:"+ft);
+            } else{
+                alert("xin vui lòng nhập lại.");
+            }
         </script>
 
     </body>

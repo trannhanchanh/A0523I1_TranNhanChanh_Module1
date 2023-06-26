@@ -11,7 +11,11 @@
             let a=prompt("Nhap chieu dai hinh chu nhat:");
             let b=prompt("Nhap chieu rong hinh chu nhat:")
             dt= a*b;
-            alert("Diện tích hình chữ nhật là:"+dt);
+            if(a>0 && b>0){
+                alert("Dien tich hinh chu nhat là:"+dt);
+            }else{
+                alert("Xin vui lòng nhập lại.")
+            }
         </script>
 
 

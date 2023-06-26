@@ -11,7 +11,11 @@
             let a=prompt("Do dai canh tam giac vuong:");
             let b=prompt("Do dai canh tam giac vuong:");
             let dt= 1/2*a*b;
-            alert("Dien tich tam giac vuong là:"+dt);
+            if (a>0 && b>0){
+                alert("Diện tích tam giác vuông là:"+dt)
+            } else{
+                alert("Xin vui lòng nhập lại.")
+            }
         </script>
 
         </body>
