@@ -8,14 +8,19 @@
    
     <body>
         <script>
-            let n=prompt("Mời bạn nhập số phần tử:");
-            for(i=0; i<=n; i++) {
-                if(n%7 == 0){
-                document.write(i+'-');
+            let n=prompt("Mời bạn nhập n phần tử:");
+            let i=0;
+            let dem=0;
+            let sum=0;
+            while( dem <= n) {
+                if(i%7 == 0) {
+                    document.write(i + "<br>");
+                    dem++;
+                   sum= sum+i;
+                }
+                i++;
             }
-                
-            }
-
+            document.write("Tổng các số n phần tử chia hết cho 7 là:"+sum);
         </script>
     
 </body>
