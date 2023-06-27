@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <script>
+            let n1=1;
+            let n2=0;
+            let nextTerm;
+            let sum=0;
+
+            for( let i=1; i<=20; i++) {
+                nextTerm=n1+n2;
+                n1=n2;
+                n2=nextTerm;
+                sum= sum+nextTerm;
+                document.write(nextTerm+ "<br>");
+         }
+         
+         document.write("Tổng của 20 số trong dãy fibonacci là:"+sum);
+           
+          
+
+        </script>
+
+</body>
+</html>

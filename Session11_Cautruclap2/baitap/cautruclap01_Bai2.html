@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <script>
+            let nhietdo= +prompt("Nhập nhiệt độ:");
+            while(nhietdo < 20 || nhietdo >100){
+                if(nhietdo <20){
+                    alert("Yêu cầu người truy cập tăng nhiệt độ.");
+                    nhietdo= +prompt("Nhập nhiệt độ:");
+                } else if(nhietdo >100){
+                    alert("Yêu cầu người truy cập giảm nhiệt độ");
+                    nhietdo= +prompt("Nhập nhiệt độ:");
+                } 
+            } 
+            alert("Nhiệt độ ổn định.");
+        </script>
+
+    </body>
+    </html>
