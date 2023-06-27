@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <script>
+            let kWh= parseFloat(prompt("Nhập số lượng khách hàng đã dùng:"));
+            if(kWh>0 && kWh<=50){
+                alert("Số tiền là:"+kWh*1728 +"VND đồng");
+            } else if(kWh>50 && kWh<=100){
+                alert("Số tiền là:"+kWh*1786 +"VND đồng");
+            } else if(kWh>101 && kWh<=200){
+                alert("Số tiền là:"+kWh*2074 +"VND đồng");
+            } else if(kWh>200){
+                alert("Số tiền là:"+kWh*2612 +"VND đồng");
+            } else{
+                alert("Xin vui lòng nhập lại.");
+            }
+        </script>
+
+    </body>
+    </html>

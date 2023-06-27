@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <script>
+            let sotien=parseFloat(prompt("Nhập số tiền:"));
+            if(sotien>0 && sotien<5000000){
+                alert("Số tiền thuế là:"+0.05*sotien +"VND đồng");
+            } else if(sotien>=5000000 && sotien<10000000){
+                alert("Số tiền thuế là:"+0.1*sotien +"VND đồng");
+            } else if(sotien>=10000000){
+                alert("Số tiền thuế:"+0.15*sotien +"VND đồng");
+            } else{
+                alert("Xin vui lòng nhập lại.");
+            }
+        </script>
+
+    </body>
+    </html>
