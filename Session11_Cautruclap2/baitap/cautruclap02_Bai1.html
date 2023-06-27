@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <tittle></tittle>
+        
+    </head>
+   
+    <body>
+        <script>
+            let n= prompt("Nhập dãy Fibonacci");
+            let a1=1;
+            let a2=0;
+            let nextTerm;
+
+            for(let i=1; i<=n;i++){
+                nextTerm=a1+a2;
+                a1=a2;
+                a2=nextTerm;
+                document.write(nextTerm+"<br>");
+            }
+
+        </script>
+
+</body>
+</html>
