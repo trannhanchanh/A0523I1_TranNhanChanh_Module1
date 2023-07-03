@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Nhập số</title>
+
+</head>
+
+<body>
+    <script>
+        let num= window.prompt("Xin mời bạn nhập dãy chuỗi phần tử của mảng:");
+        let str= num.toString();
+        let result= [str[0]];
+
+        for(let i=1;i<str.length; i++){
+            if((str[i-1]%2===0) &&(str[i]%2===0) ){
+                result.push("-", str[i]);
+            }else{
+                result.push(str[i]);
+            }
+        }
+        document.write(result.join(''));
+
+    </script>
+</body>
+</html>
