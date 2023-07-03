@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+
+</head>
+
+<body>
+    <script>
+        let tienganh=["hello","love","name","address"];
+        let tiengviet=["xin chào", "yêu", "tên", "địa chỉ"];
+        function findWord(){
+            let keyword= prompt("Mời bạn nhập vào từ tiếng anh cần tìm:");
+            for(let i=0; i<tienganh.length; i++){
+                if(tienganh[i]== keyword)
+                    return i;
+                
+            }
+            return -1;
+
+        }
+         function translate(){
+            let i= findWord();
+            if(i==-1){
+                alert("No find");
+            }else{
+                alert("Nghĩa của nó là:"+tiengviet[i]);
+            }
+         }
+         translate();
+
+    </script>
+
+</body>
+</html>
