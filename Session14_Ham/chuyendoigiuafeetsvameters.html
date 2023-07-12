@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <form>
+      <p>
+        <label>Độ dài foot:</label>
+        <input id="inputfoot" type="text" placeholder="foot"
+        oninput="footToMeter(this.value)" onchange="footToMeter(this.value)">
+      </p>
+      <p>Meter:<span id="outputMeter"></span></p>
+    </form>
+    <script>
+      function footToMeter(valNum){
+        valnum=parseFloat(valNum);
+        document.getElementById("outputMeter").innerHTML=0.305*valNum;
+      }
+    </script>
+    <br>
+    <form>
+      <p>
+        <label>Độ dài meter:</label>
+        <input id="inputmeter" type="text" placeholder="meter"
+        oninput="meterToFoot(this.value)" onchange="meterToFoot(this.value)">
+      </p>
+      <p>Foot:<span id="outputFoot"></span></p>
+    </form>
+    <script>
+      function meterToFoot(valNum){
+        valnum=parseFloat(valNum);
+        document.getElementById("outputFoot").innerHTML=3.279*valNum;
+      }
+    </script>
+
+  </body>
+  </html>

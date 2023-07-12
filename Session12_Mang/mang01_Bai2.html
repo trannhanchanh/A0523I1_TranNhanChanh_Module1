@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title></title>
+
+</head>
+
+<body>
+    <script>
+        let numbers= new Array(10);
+        for(let i=0; i<numbers.length; i++){
+            numbers[i]=+prompt("Nhap gia tri phan tu trong mang:"+i);
+        }
+        let max= numbers[0];
+        let index=0;
+        for(let j=0; j<numbers.length; j++){
+            if(numbers[j]>=max){
+                numbers[j]=max;
+                index=j;
+                
+
+            }
+            
+        }
+        document.write("Số nguyên lớn nhất trong mảng là:"+max+ "tại vị trí" +index);
+        
+
+
+    </script>
+</body>
+</html>
