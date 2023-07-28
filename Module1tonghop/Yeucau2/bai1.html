@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let h= +prompt("Nhập chiều cao:")
+        for(let i=1; i<=h; i++) {
+            if( i==1 || i==2 || i===h) {
+                for(let j=1; j<=i; j++) {
+                    document.write("*");
+                }
+                document.write("</br>");
+
+            } else {
+                for(let j=1; j<=i; j++) {
+                    if(j==1 || j==i) {
+                        document.write("*");
+                    } else {
+                        document.write("&nbsp;&nbsp;");
+                    }
+                }
+                document.write("</br>");
+            }
+        }
+    </script>
+
+  </body>
+</html>
