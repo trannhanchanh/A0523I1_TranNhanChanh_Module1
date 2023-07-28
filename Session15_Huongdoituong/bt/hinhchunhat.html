@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <canvas id="canvas" width="200" length="200"></canvas>
+    <p id="dienTich"></p>
+    <p id="chuVi"></p>
+    <script>
+        class Rectangle{
+            constructor(width, length){
+                this.width= width;
+                this.length= length;
+
+            }
+            get dienTich() {
+                return this.width * this.length;
+            }
+            get chuVi() {
+                return 2*(this.width+this.length);
+            }
+            draw() {
+                let canvas= document.getElementById("canvas");
+                let ctx= canvas.getContext("2d");
+                ctx.clearRect(0, 0, canvas.width, canvas.length);
+                ctx.fillRect(10, 10, this.width, this.length);
+
+
+            }
+            resize(width, length) {
+                this.width= width;
+                this.length= length;
+            }
+
+
+    }
+    let rect= new Rectangle(500, 1000);
+    rect.draw();
+    rect.resize(50, 100);
+    document.getElementById("dienTich").innerHTML="Diện tích"+ rect.dienTich;
+    document.getElementById("chuVi").innerHTML="Chu vi"+ rect.chuVi;
+
+    </script>
+</body>
+</html>

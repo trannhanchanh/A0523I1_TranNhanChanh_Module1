@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        function tinhgiaithua(n){
+            if(n===0 || n===1){
+                return 1;
+            } else{
+                let giaithua= n*tinhgiaithua(n-1);
+                return giaithua;
+            }
+
+        }
+        let so= +prompt("Mời bạn nhập số:");
+        let giaithua= tinhgiaithua(so);
+        document.write("Giai thừa của"+so+"là:"+giaithua);
+    </script>
+
+  </body>
+</html>

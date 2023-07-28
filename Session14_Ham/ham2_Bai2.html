@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    
+    <script>
+    function chuvihinhtron(number){
+        let chuvi= 2*Math.PI* number;
+        return chuvi;
+     }
+     function dientichhinhtron(number){
+        let dientich= Math.PI* number* number;
+        return dientich;
+     }
+     
+ let bankinh= +prompt("Nhập bán kính của hình tròn:");
+ let dientich= dientichhinhtron(bankinh);
+ let  chuvi= chuvihinhtron(bankinh);
+
+ document.write("Diện tích hình tròn là:"+dientich);
+ document.write("Chu vi hình tròn là:"+chuvi);
+</script>
+
+  </body>
+</html>

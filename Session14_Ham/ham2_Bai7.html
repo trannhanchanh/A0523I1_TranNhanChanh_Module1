@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let a= +prompt("Nhập số a:");
+        let b= +prompt("Nhập số b:");
+        function hoandoiso(a, b){
+            let temp= a;
+            a=b;
+            b=temp;
+            return [a, b];
+        }
+        document.write("Trước khi hoán đổi:a="+a+";"+"b="+b);
+        let swapped= hoandoiso(a, b);
+        a= swapped[0];
+        b= swapped[1];
+        document.write("Sau khi hoán đổi: a="+a+";"+"b="+b);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        class Mobile {
+            constructor(){
+                this.battery= 100;
+                this.luutinnhandangsoan= luutinnhandangsoan;
+                this.luutinnhanhopthuden= luutinnhanhopthuden;
+                this.luutinnhandagui= luutinnhandagui;
+                this.kiemtratrangthaiDT = false
+
+                this.turnOn = function() {
+                    return this.kiemtratrangthaiDT = true; 
+                };
+                this.turnOff= function() {
+                    return this.kiemtratrangthaiDT = false;
+                };
+                this.xacpin= function() {
+                    if(this.battery<100){
+                        alert("Đang sạc:"+this.battery+"%");
+                    } else{
+                        alert("Pin đã sạc đầy.");
+                    }
+                };
+                this.giampin= function() {
+
+                    this.battery -- ;
+                    if(this.battery=0){
+                        return this.turnOff();
+                    }
+                };
+                this.soantinnhan= function(Message) {
+                    if(this.kiemtratrangthaiDT) {
+                        this.luutinnhandangsoan= Message;
+                        console.log("Tin nhắn đang soạn:"+this.luutinnhandangsoan);
+                        this.giampin();
+                    } else {
+                        alert("Điện thoại đang tắt.");
+                    }
+                   
+                };
+                this.nhantinnhan= function(Message){
+                    if(this.kiemtratrangthaiDT){
+                        this.luutinnhanhopthuden.push(Message);
+                        console.log("Tin nhắn nhận được:"+Message);
+                        this.giampin();
+                    } else {
+                        alert("Điện thoại đang tắt.");
+                    }
+
+                };
+                this.guitinnhan= function(dienthoaikhac, Message){
+                    if(this.kiemtratrangthaiDT){
+                        dienthoaikhac.this.nhantinnhan(Message);
+                        this.luutinnhandagui.push(Message);
+                        console.log("Tin nhắn đã gửi:"+Message);
+                        this.giampin();
+                    } else {
+                        alert("Điện thoại đang tắt.");
+                    }
+                }
+                this.xemtintronghopthuden= function() {
+                    if(this.kiemtratrangthaiDT) {
+                        console.log("Tin nhắn trong hộp thư đến:"+this.luutinnhanhopthuden);
+                        this.giampin();
+                    } else {
+                        alert("Điện thoại đang tắt.");
+                    }
+                }
+                this.xemtindagui= function() {
+                    if(this.kiemtratrangthaiDT) {
+                        console.log("Tin nhắn đã gửi:"+this.luutinnhandagui);
+                        this.giampin();
+                    } else {
+                        alert("Điện thoại đang tắt");
+                    }
+                }
+            }
+        }
+        let Nokia= new Mobile();
+        let iphone= new Mobile();
+        Nokia.turnOn();
+        iphone.turnOn();
+        // Nokia gởi đến iphone
+        Nokia.soantinnhan("Xin chào, bạn khỏe không. Tôi là chánh đây");
+        Nokia.guitinnhan(iphone, Nokia.luutinnhandangsoan);
+        // iphone kiểm tra tin nhắn
+        iphone.xemtintronghopthuden();
+        // iphone gởi đến nokia
+        iphone.soantinnhan("Chào bạn. Bạn cũng khỏe chứ");
+        iphone.guitinnhan(Nokia, iphone.luutinnhandangsoan);
+        Nokia.xemtintronghopthuden();
+        Nokia.xemtindagui();
+
+    </script>
+
+</body>
+</html>

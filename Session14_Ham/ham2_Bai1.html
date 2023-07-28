@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    Bình phương của<input type="text" id="input" oninput="calculate()"/> là:<span id="result"></span>
+    <script>
+        function square(number){
+            let result= number*number;
+            return result;
+        }
+        function calculate(){
+            let input=document.getElementById("input").value;
+            let result= square(input);
+            document.getElementById("result").innerHTML= result;
+        }
+    </script>
+  </body>
+  </html>

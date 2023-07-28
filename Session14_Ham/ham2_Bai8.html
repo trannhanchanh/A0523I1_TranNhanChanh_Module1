@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function daonguocmang() {
+
+            let numbers = [];
+            let n = +prompt("Mời bạn nhập số phần tử của mảng:");
+            for (let i = 0; i < n; i++) {
+                let m = +prompt("Nhập giá trị phần tử trong mảng:");
+                numbers.push(m);
+            }
+            console.log(numbers);
+            let number2= [];
+            for(let i=0; i<numbers.length; i++){
+                number2[i] = numbers[i];
+
+            }
+            return number2.reverse();
+
+        }
+
+
+        let daomang = daonguocmang();
+         console.log(daomang);
+
+
+
+
+    </script>
+</body>
+
+</html>

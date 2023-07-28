@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        var ngoisao=["Polaris", "Aldebaran", "Deneb","Vega", "Altair","Dubhe", "Regulus"];
+        var chomsao=["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function timsaotuongung(tenngoisao){
+            for(let i=0; i<ngoisao.length; i++){
+                if(ngoisao[i]== tenngoisao){
+                    return chomsao[i];
+                }
+            }
+            return "Không tìm thấy ngôi sao nào";
+        }
+        let input= prompt("Mời bạn nhập ngôi sao:");
+        let result= timsaotuongung(input);
+        if(result== "Không tìm thấy ngôi sao nào"){
+            alert("Không có tên ngôi sao thích hợp.");
+        } else{
+            alert("Tên chòm sao tương ứng là:"+result);
+        }
+    </script>
+
+  </body>
+</html>

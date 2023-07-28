@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let luong= +prompt("Nhập tiền lương của nhân viên:");
+        let thue= 0;
+        if(luong==15000000){
+            alert("Tiền thuế là:"+ 20*luong/100);
+        } else if(luong<15000000 && luong>7000000){
+            alert("Tiền thuế là:"+10*luong/100);
+        } else if(luong<7000000){
+            alert("Tiền thuế là:"+5*luong/100);
+        }
+
+    </script>
+
+  </body>
+</html>
