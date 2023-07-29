@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let a= parseInt(prompt("Nhập số hàng:"));
+        let b= parseInt(prompt("Nhập số cột:"));
+        let matrix=[];
+        for(let i=0; i<a; i++){
+            let row=[];
+            for(let j=0; j<b; j++){
+                let value= parseInt(prompt("Nhập giá trị cho phần tử:"+i+j));
+                row.push(value);
+            }
+            matrix.push(row);
+        }
+        function findMax(matrix){
+            let max= matrix[0][0];
+            for(let i=0; i<= matrix.length-1; i++){
+                for(let j=0; j<=matrix[i].length-1; j++){
+                    if(matrix[i][j]>max){
+                        max= matrix[i][j];
+                    }
+                }
+            }
+            return max;
+        }
+        function findMin(matrix){
+            let min= matrix[0][0];
+            for(let i=0; i<=matrix.length-1; i++){
+                for(let j=0; j<=matrix[i].length-1; j++){
+                    if(matrix[i][j]<min){
+                        min= matrix[i][j]
+                    }
+                }
+            }
+            return min;
+        }
+        document.write("Giá trị lớn nhất trong mảng là:"+findMax(matrix));
+        document.write("Giá trị nhỏ nhất trong mảng là:"+findMin(matrix));
+
+    </script>
+  </body>
+</html>

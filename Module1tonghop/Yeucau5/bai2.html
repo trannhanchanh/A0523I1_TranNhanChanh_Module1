@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let a= parseInt(prompt("Nhập số hàng:"));
+        let b= parseInt(prompt("Nhập số cột:"));
+        let matrix=[];
+        for(let i=0; i<a; i++){
+            let row=[];
+            for(let j=0; j<b; j++){
+                let value= parseInt(prompt("Nhập giá trị cho phần tử:"+i+j));
+                row.push(value);
+            }
+            matrix.push(row);
+        }
+        function checkPrime(number){
+            if(number<2){
+                return false;
+            }
+            for(let i=2; i<=Math.sqrt(number); i++){
+                if(number %i==0){
+                    return false;
+                }
+            }
+            return true;
+        }
+        function listPrimeandcountPrime(matrix){
+            let count= 0;
+            let primeNumbers=[];
+            for(let i=0; i<=matrix.length-1; i++){
+                for(let j=0; j<=matrix[i].length-1; j++){
+                    if(checkPrime(matrix[i][j])){
+                        count++;
+                        primeNumbers.push(matrix[i][j]);
+                    }
+                }
+            }
+            document.write("Số nguyên tố là:"+primeNumbers.join(",")+"<br>");
+            document.write("có"+count+"số nguyên tố");
+        }
+        listPrimeandcountPrime(matrix);
+
+    </script>
+  </body>
+</html>

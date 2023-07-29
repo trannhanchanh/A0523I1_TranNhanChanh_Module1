@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let a= parseInt(prompt("Nhập số hàng:"));
+        let b= parseInt(prompt("Nhập số cột:"));
+        let matrix=[];
+        for(let i=0; i<a; i++){
+            let row=[];
+            for(let j=0; j<b; j++){
+                let value= parseInt(prompt("Nhập giá trị cho phần tử"+i+j));
+                row.push(value);
+            }
+            matrix.push(row);
+        }
+        function tongsochan(matrix) {
+            let sum=0;
+            for(let i=0; i<=matrix.length-1; i++){
+                for(let j=0; j<=matrix[i].length-1; j++){
+                    if(matrix[i][j]%2 === 0){
+                        sum+= matrix[i][j];
+                    }
+                }
+            }
+            return sum;
+        }
+        sum= tongsochan(matrix);
+        document.write("Tổng số chẵn trong ma trận là:"+sum);
+
+    </script>
+  </body>
+</html>
