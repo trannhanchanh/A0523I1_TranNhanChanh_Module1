@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        function chuHoa(str){
+            let tu= str.trim().toLowerCase().split(/\s+/);
+            for(let i=0; i<=tu.length-1; i++){
+                tu[i]= tu[i].charAt(0).toUpperCase()+tu[i].slice(1);
+            }
+            return tu.join('');
+        }
+        function timtudainhat(str){
+            let tu= str.trim().split(/\s+/);
+            let tudai= tu[0];
+            for(let i=0; i<=tu.length-1; i++){
+                if(tu[i].length> tudai.length){
+                    tudai= tu[i];
+                }
+            }
+            return tudai;
+        }
+        function main(){
+            let inputXau= prompt("Nhập xau:");
+            document.write("Before xau:"+inputXau);
+            let afterXau= chuHoa(inputXau);
+            document.write("After xau:"+afterXau);
+            let LongestWord= timtudainhat(afterXau);
+            document.write("Từ dài nhất trong xâu là: "+afterXau+"là:"+LongestWord);
+        }
+        main();
+    </script>
+
+  </body>
+</html>

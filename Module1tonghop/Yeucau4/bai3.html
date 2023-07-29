@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let a= prompt("Nhập chuỗi thứ nhất:");
+        let b= prompt("Nhập chuỗi thứ hai:");
+        let uniquea=[];
+        let uniqueb=[];
+        let count1=0;
+        let count2=0;
+        let step;
+        let commonStr=[];
+        document.write("String a:"+a+"<br>");
+        document.write("String b:"+b+"<br");
+        commonCharacterCount(a, b);
+        function commonCharacterCount(a,b) {
+            for(let i=0; i<=a.length-1; i++){
+                for(let j=0; j<=b.length-1; j++){
+                    if(a[i===b[j]]){
+                        step= true;
+                        break;
+                    } else {
+                        step= false;
+                    }
+                    
+                }
+                if(step== true){
+                    count2++;
+                    commonStr.push(s1[i]);
+                }
+            }
+            document.write("2 chuỗi có chung là:"+count2+"có ký tự chung là:"+commonStr);
+        }
+
+
+
+    </script>
+  </body>
+</html>
