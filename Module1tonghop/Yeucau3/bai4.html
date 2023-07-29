@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let menu={
+            1: {name: "cafe", price:15000},
+            2: {name: "cam vắt", price:25000},
+            3: {name: "nước ép cà rốt", price: 30000},
+            4: {name: "nước ép cà chua", price: 30000},
+            5: {name: "nước lọc", price:8000},
+            6: {name: "nước dừa", price: 25000},
+
+
+        }
+        let total= 0;
+        alert("Danh sách các loại đồ uống:");
+        alert("1: cafe");
+        alert("2: cam vắt");
+        alert("3: nước ép cà rốt");
+        alert("4: nước ép cà chua");
+        alert("5: nước lọc");
+        alert("6: nước dừa");
+        let choice= 0;
+        do {
+            choice= parseInt(prompt("Mời quý khách vui lòng nhập để chọn đồ uống:"));
+            if (choice >=1 && choice<=6){
+                let quantity= parseInt(prompt("Vui lòng nhập số lượng:"));
+                let price= menu[choice].price;
+                total+= price*quantity;
+            }else if(choice==7){
+                document.write("Số tiền bạn cần phải trả là:"+total+"VNĐ");
+
+            } else {
+                document.write("Xin vui lòng nhập lại.");
+            }
+        } while(choice!==7);
+    
+    </script>
+
+  </body>
+</html>
