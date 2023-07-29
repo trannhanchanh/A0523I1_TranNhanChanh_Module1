@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+  </head>
+
+  <body>
+    <script>
+        let numerators=[5, 2, 5];
+        let denominators= [6, 3, 4];
+        let maxFraction= numerators[0]/denominators[0];
+        let maxIndex= 0;
+        for(let i=0; i<=numerators.length-1; i++){
+            if(numerators[i]/denominators[i]>maxFraction){
+                maxFraction= numerators[i]/denominators[i];
+                maxIndex= i;
+            }
+        }
+        document.write("Phân số lớn nhất là:"+maxFraction+"tại vị trí"+maxIndex);
+
+
+    </script>
+  </body>
+</html>
